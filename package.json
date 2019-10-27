@@ -1,0 +1,21 @@
+{
+  "name": "esmodules-dev-server",
+  "version": "0.0.1",
+  "description": "A tiny development Express-based websever that automatically redirects extension-less requests for ES Modules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "webserver",
+    "esmodules",
+    "development"
+  ],
+  "author": "Dan Wellman",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "opn": "^6.0.0"
+  }
+}
