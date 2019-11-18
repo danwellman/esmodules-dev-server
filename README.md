@@ -23,6 +23,6 @@ Now you can launch the server with the default settings using `npm run serve`.
 ## Options
 
 | Option | Default | Usage |
-| --------------------------
+| ------ | ------- | ------|
 | `--port` | 3000 | Set the port the web server will listen on |
 | `--dir` | '/dist' | Set the directory modules are served from |
