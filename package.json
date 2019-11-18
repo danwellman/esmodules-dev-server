@@ -1,11 +1,11 @@
 {
   "name": "esmodules-dev-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A tiny development Express-based websever that automatically redirects extension-less requests for ES Modules",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/danwellman/esmodules-dev-server"
   },
   "keywords": [
     "webserver",

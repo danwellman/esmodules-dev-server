@@ -1,5 +1,6 @@
 const express = require('express');
 const opn = require('opn');
+const path = require('path');
 
 const app = express();
 
@@ -13,7 +14,17 @@ const port = argVals[argNames.findIndex(arg => arg === '--port')] || '3000';
 
 app.use('/', express.static(root + '/'));
 app.use(staticDir, express.static(root + staticDir), (req, res) => {
-  res.redirect(staticDir + req.url + '.js');
+  try {
+    if (fs.lstatSync(path.normalize(root + staticDir + req.url)).isDirectory()) {
+      res.redirect(staticDir + req.url + '/index.js');
+    }
+  } catch (error) {
+    if (fs.lstatSync(path.normalize(root + staticDir + req.url + '.js')).isFile()) {
+      res.redirect(staticDir + req.url + '.js');
+    } else {
+      console.error('Error serving', staticDir + req.url + '.js', error);
+    }
+  }
 });
 
 app.listen(port);
