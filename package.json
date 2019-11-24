@@ -1,6 +1,6 @@
 {
   "name": "esmodules-dev-server",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A tiny development Express-based websever that automatically redirects extension-less requests for ES Modules",
   "main": "index.js",
   "repository": {
